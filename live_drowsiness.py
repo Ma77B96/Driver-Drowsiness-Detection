@@ -47,7 +47,7 @@ while (cap.isOpened()):
         cv2.rectangle(frame, (r[0], r[1]), (r[0]+r[2], r[1]+r[3]), (255,0,0), 2)
         right_eye = frame[r[1]:r[1]+r[3], r[0]:r[0]+r[2]]
 
-        # process frame before prediction
+        # processamneto del frame prima della predict
         #reye_array = cv2.cvtColor(right_eye, cv2.COLOR_BGR2GRAY)
         reye_array = right_eye / 255
         resized_array = cv2.resize(reye_array, (64,64))
@@ -66,7 +66,7 @@ while (cap.isOpened()):
         left_eye = frame[l[1]:l[1]+l[3], l[0]:l[0]+l[2]]
 
 
-        # processamento del frame prima dell'addestramento
+        # processamento del frame prima della predict
         #leye_array = cv2.cvtColor(left_eye, cv2.COLOR_BGR2GRAY)
         leye_array = left_eye / 255
         resizedArray = cv2.resize(leye_array, (64,64))

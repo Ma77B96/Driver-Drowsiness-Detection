@@ -94,9 +94,9 @@ while (cap.isOpened()):
     cv2.putText(frame,'Score:'+str(score),(100,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
 
 
-    # controllo sullo score con soglia fissata a 30
+    # controllo sullo score con soglia fissata a 20
     if(score>20):
-        # Il conducente ha sonno: svegliamolo!!
+        # Allarmo il conducente che sembra assonnato
         cv2.putText(frame, "FAI UNA PAUSA CAFFE'!", (frame.shape[1] - 1700, frame.shape[0]-100), cv2.FONT_HERSHEY_DUPLEX, 4.0, (0,0,255), 3)
         cv2.imwrite(os.path.join(path,'image.jpg'),frame)
         try:
